@@ -1,0 +1,15 @@
+.espaco{
+    padding-top: 45px;
+}
+
+.color{
+    background-color: aliceblue;
+}
+
+.selecao{
+    user-select: none;
+}
+
+.horaspace{
+    padding-left: 15px; 
+}

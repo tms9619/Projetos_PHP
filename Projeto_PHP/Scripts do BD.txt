@@ -1,0 +1,33 @@
+/*Tabela com a lista de usuarios está limitada...*/
+CREATE TABLE IF NOT EXISTS users (
+  id_users int(11) NOT NULL AUTO_INCREMENT,
+  `user` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  setor varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  pass varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (id_users)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO users (`user`,setor,pass) VALUES ('thiago.marinho','T.I','validar123');
+INSERT INTO users (`user`,setor,pass) VALUES ('taynah.perreira','Financeiro','tay123');
+
+/*ALTER USER caso aja algum problema ao tentar se conectar com o banco de dados mysql Workbench
+tive esse problema aqui más essa clasula resolveu depois do 'BY' pode passar qualquer senha
+de sua preferencia*/
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Unitrans2018';
+
+/*Tabela de homologação onde estou gravando os dados atualmente referido dos chamados...*/
+CREATE TABLE chamadomolog(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(60) NOT NULL,
+    equipamento VARCHAR(80) NOT NULL,
+    defeito VARCHAR(80) NOT NULL, 
+    setor VARCHAR(60) NOT NULL,
+    dat DATE NOT NULL,
+    hora time NOT NULL,
+    obs VARCHAR(500) NULL,
+    PRIMARY KEY(id)
+) COLLATE=utf8_unicode_ci;
+
+INSERT INTO chamadomolog(nome, equipamento, defeito, setor, dat , hora, obs) VALUES('Tiago','Desktop','Apagado','TRÁFEGO','2018/10/17','10:20','Foi apertado os cabos');
+INSERT INTO chamadomolog(nome, equipamento, defeito, setor, dat , hora, obs) VALUES('João','NootBook','Não liga','COMPRAS','2018/10/17','10:20','');
+INSERT INTO chamadomolog(nome, equipamento, defeito, setor, dat , hora, obs) VALUES('Nayane','Desktop','Teclado não funciona','DEPARTAMENTO PESSOAL','2018/10/17','10:20','Retirei o cabo e coloquei e nada...');

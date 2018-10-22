@@ -1,0 +1,73 @@
+body{
+    background: url(../img/unitrans.jpg) repeat-x center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: 65%;
+    background-position: 45% 4%;
+}
+
+.form-horizontal{
+    color:black;
+    justify-content: center; 
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border-radius: 1em;
+    margin-left: -170px;
+    margin-top: -132px;
+    padding: 50px 50px 15px 50px;
+    background-color: cornflowerblue;
+    box-shadow: 2px 2px 40px 3px  #666;
+}
+
+    .form-group{
+        color: #666;
+        margin: 9px 0px 5px 0px;
+        user-select: none;
+    }
+
+        .btn_btn-primary{
+            border-radius: 1em;
+            outline: none;
+            margin-left: 85%;
+            margin-top: 25px;
+            padding: 10px 10px 10px 10px;
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #5cb85c;
+            border: solid transparent; 
+        }
+
+        .col-lg-2_control-label{
+            margin-right: 11.5px;
+        }
+
+        .form-control{
+            border-radius: 1em;
+            outline: none;
+            padding-left: 5px;
+            border: solid transparent;
+            color: #666;
+        }
+
+        .checkbox-1{
+            border: solid transparent;
+        }
+
+        input:focus{
+            border: solid 1px;
+            border-color: orange;   
+            padding-top: 3.2px;
+            padding-bottom: 3.2px;
+            padding-left: 4.8px;
+            padding-right: 4.8px; 
+            margin-bottom: 0px; 
+            color: #666;
+        }
+
+        button:focus{
+            border: solid 1px;
+            padding: 12px 12px 12px 12px;
+            border-color: green;
+        }
